@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { Clock, Users, Star, TrendingUp, Brain, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BentoCourses = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="courses" className="section-padding bg-muted/30">
       <div className="container-custom">
@@ -61,7 +64,10 @@ const BentoCourses = () => {
                     20 Students Max
                   </div>
                 </div>
-                <Button className="w-full btn-hero">
+                <Button 
+                  className="w-full btn-hero"
+                  onClick={() => navigate('/course/digital-marketing-mastery')}
+                >
                   Learn More
                 </Button>
               </div>
@@ -113,7 +119,10 @@ const BentoCourses = () => {
                     15 Students Max
                   </div>
                 </div>
-                <Button className="w-full btn-hero">
+                <Button 
+                  className="w-full btn-hero"
+                  onClick={() => navigate('/course/digital-marketing-ai')}
+                >
                   Explore Advanced
                 </Button>
               </div>

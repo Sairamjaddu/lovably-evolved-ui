@@ -52,10 +52,26 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-hero text-lg px-8 py-4">
+              <Button 
+                className="btn-hero text-lg px-8 py-4"
+                onClick={() => {
+                  const coursesElement = document.querySelector('#courses');
+                  if (coursesElement) {
+                    coursesElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Start Your Journey
               </Button>
-              <Button className="btn-secondary text-lg px-8 py-4">
+              <Button 
+                className="btn-secondary text-lg px-8 py-4"
+                onClick={() => {
+                  const coursesElement = document.querySelector('#courses');
+                  if (coursesElement) {
+                    coursesElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Book Free Demo Class
               </Button>
             </div>

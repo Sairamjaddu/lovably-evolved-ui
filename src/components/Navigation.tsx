@@ -8,10 +8,25 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Courses', href: '#courses' },
-    { name: 'Admission', href: '#admission' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Schedule', href: '#schedule' },
+    { name: 'Instructors', href: '#instructors' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleCoursesClick = () => {
+    const coursesElement = document.querySelector('#courses');
+    if (coursesElement) {
+      coursesElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -26,20 +41,20 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
+                  onClick={() => handleNavClick(item.href)}
                   className="text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="btn-hero">
+            <Button className="btn-hero" onClick={handleCoursesClick}>
               Enroll Now
             </Button>
           </div>
@@ -60,17 +75,16 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
               <div className="pt-4">
-                <Button className="btn-hero w-full">
+                <Button className="btn-hero w-full" onClick={handleCoursesClick}>
                   Enroll Now
                 </Button>
               </div>

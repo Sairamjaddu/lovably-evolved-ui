@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import CourseDigitalMarketing from "./pages/CourseDigitalMarketing";
+import CourseDigitalMarketingAI from "./pages/CourseDigitalMarketingAI";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +18,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/course/digital-marketing-mastery" element={<CourseDigitalMarketing />} />
+          <Route path="/course/digital-marketing-ai" element={<CourseDigitalMarketingAI />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

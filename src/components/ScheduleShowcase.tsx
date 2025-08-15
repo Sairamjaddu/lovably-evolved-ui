@@ -50,7 +50,7 @@ const ScheduleShowcase = () => {
   ];
 
   return (
-    <section className="section-padding">
+    <section id="schedule" className="section-padding">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

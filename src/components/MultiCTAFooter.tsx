@@ -63,7 +63,7 @@ const MultiCTAFooter = () => {
   ];
 
   return (
-    <footer className="section-padding bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <footer id="contact" className="section-padding bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="container-custom">
         {/* Main CTA Section */}
         <div className="text-center mb-16 animate-fade-in">
