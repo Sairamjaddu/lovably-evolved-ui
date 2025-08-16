@@ -18,9 +18,9 @@ const BentoCourses = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-slide-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
           {/* Course 1 - Large Block */}
-          <div className="bento-card-large bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="col-span-1 md:col-span-2 bento-card-large bg-gradient-to-br from-primary/10 to-secondary/10">
             <div className="h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-4">
@@ -75,7 +75,7 @@ const BentoCourses = () => {
           </div>
 
           {/* Course 2 - Large Block */}
-          <div className="bento-card-large bg-gradient-to-br from-secondary/10 to-accent/10">
+          <div className="col-span-1 md:col-span-2 bento-card-large bg-gradient-to-br from-secondary/10 to-accent/10">
             <div className="h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-4">

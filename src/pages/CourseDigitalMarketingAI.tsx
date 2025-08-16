@@ -69,10 +69,11 @@ const CourseDigitalMarketingAI = () => {
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back to Home
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Back</span>
             </button>
-            <h1 className="text-xl font-bold gradient-text">Skills.do</h1>
-            <Button className="btn-hero">
+            <h1 className="text-lg sm:text-xl font-bold gradient-text">Skills.do</h1>
+            <Button className="btn-hero text-sm sm:text-base px-4 sm:px-6">
               Enroll Now
             </Button>
           </div>

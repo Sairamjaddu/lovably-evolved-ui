@@ -69,7 +69,7 @@ const ScheduleShowcase = () => {
               Weekday Sessions
             </h3>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {timeSlots.map((slot, index) => {
                 const IconComponent = slot.icon;
                 const progressPercentage = (slot.students / slot.maxStudents) * 100;
@@ -131,7 +131,7 @@ const ScheduleShowcase = () => {
               Weekend Intensive Sessions
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {weekendSlots.map((slot, index) => {
                 const progressPercentage = (slot.students / slot.maxStudents) * 100;
                 
